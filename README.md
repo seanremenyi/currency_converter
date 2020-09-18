@@ -1,25 +1,23 @@
-# Terminal Weather APP
+# Currency Converter APP
 
-This is a terminal weather application that I have created that consumes an API.
+This is a terminal currency converter application that I have created that consumes an API.
 
 ### __Purpose__
 
-The purpose of this application is to give the user current weather conditions for the city he lives in (these include current meteorological conditions, temperature, wind speed, and time of sunset).
+The purpose of this application is to give the user a way to convert from one currency to another any amount of money they input. The API has dozens of currencies available.
 
 ### __Target Audience__
 
-Developers and other versed in using terminal applications who would like to know the weather outside. Possibly wanting to know the conditions if they can go outside for a break.
-
+Developers and other versed in using terminal applications who would like to just convert money from one currency to another.
 ### __Outside Resources__
 
-This application consumes the OpenWeather API which can be found at 
-https://openweathermap.org/
+This application an API which can be found at 
+https://exchangeratesapi.io/ which uses data published from the European Central Bank.
 
-This application requires an API key which can be obtained at https://openweathermap.org/price under the free tier.
 
 ### __Set Up__
 
-This application uses python3.8 and some python3.8modules as well as getting an API key from OpenWeather
+This application uses python3.8 and some python3.8 modules
 
 ##### For the App,
 
@@ -34,41 +32,24 @@ This application uses python3.8 and some python3.8modules as well as getting an 
     3. `python3 -m venv venv`
 5. Install the modules in requirements.txt
 
-##### For the API Key,
-
-1. Obtain a key from https://openweathermap.org/price
-2. Set up an enviorment variable with the following command
-    `export API_KEY = {API-Key}`
 
 ### __Running the APP__
 
 The application can be ran by using the following bash command
 
-`python3.8 weather.py`
+`python3.8 main.py`
 
-From here the app will ask you for the city you are looking for. 
+From here the app will ask you for the currency you are converting from. 
 
-The Application expects the format of the first letter of the city capitalized followed by a comma and then followed by the 2-letter country code. For example
+The Application expects the format of three capitalized letters. For example
 
-`Melbourne,Au`
+`AUD`
 
-If there is any 400 or 500 status code error, the application will ask you to re-input your city.
+You will then be asked for the currency you are converting to, in the same format.
 
-List of cities are available on the OpenWeather website
+You can input 1 to receive all the available currencies the API has access to.
+
+You will then be prompted for the amount to convert and you will get the results.
 
 
 # Hope you enjoy!
-
-
-
-
-
-
-
-
-
-
-
-
-
-
