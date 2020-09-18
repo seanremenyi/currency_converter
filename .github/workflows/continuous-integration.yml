@@ -4,6 +4,7 @@ on:
   push:
     branches: [ master ]
     
+    
 jobs:
   test_suite:
     runs-on: ubuntu-latest
