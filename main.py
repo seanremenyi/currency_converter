@@ -1,8 +1,8 @@
 import requests
 import json
-from convert import Currency_converter
+from convert import CurrencyConverter
 
-new_request = Currency_converter()
+new_request = CurrencyConverter()
 new_request.get_current_rates()
 
 

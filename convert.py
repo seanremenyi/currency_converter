@@ -2,7 +2,7 @@ import requests
 import json
 from decorators import format
 
-class Currency_converter():
+class CurrencyConverter():
     current_rates = []
     
     @classmethod
