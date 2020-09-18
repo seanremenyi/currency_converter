@@ -28,8 +28,8 @@ class Currency_converter():
     def get_currency_value(cls, currency_code):
         return cls.current_rates[currency_code]
         
-    def convert(self, currency_code_to, currency_code_from):
-        return 1000*currency_code_to/currency_code_from
+    def convert(self, amount, currency_value_to, currency_value_from):
+        return amount*currency_value_to/currency_value_from
         
         
         
