@@ -25,28 +25,8 @@ class Currency_converter():
         
     
     @classmethod
-    def convert_to(cls):
-        currency_code = input("""
-Which currency_code would you like to convert to? 
-(format: 3-letters capitalized, ex:AUD)
-Input 1 for available currencies\n\n""")
-        if currency_code in cls.current_rates:
-            return cls.current_rates[currency_code]
-        elif currency_code == "1":
-            cls.currencies_available()
-        cls.convert_to()
-    
-    @classmethod    
-    def convert_from(cls):
-        currency_code = input("""
-Which currency_code would you like to convert from? 
-(format: 3-letters capitalized, ex:AUD)\n
-Input 1 for available currencies\n\n""")
-        if currency_code in cls.current_rates:
-            return cls.current_rates[currency_code]
-        elif currency_code == "1":
-            cls.currencies_available()
-        cls.convert_from()
+    def get_currency_value(cls, currency_code):
+        return cls.current_rates[currency_code]
         
     def convert(self, currency_code_to, currency_code_from):
         return 1000*currency_code_to/currency_code_from
