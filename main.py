@@ -2,20 +2,35 @@ import requests
 import json
 from convert import Currency_converter
 
-
-# def get_response():
-#     response = requests.get("http://data.fixer.io/api/latest?access_key=7afe03ee50cf06a98045037e8bed6a24")
-#     json_text = json.loads(response.text)
-#     if json_text["success"] == True:
-#         return json_text
-#     get_response()
-    
-
-    
 new_request = Currency_converter()
 new_request.get_current_rates()
-print(new_request.current_rates)
-print(new_request.currencies_available())
+
+
+print("""
+Which currency would you like to convert to?
+Format: 3 Capitalized letters, Ex: AUD
+(Type 1 for list of avaiable currencies)
+""")
+convert_to_code = new_request.get_currency_code()
+
+
+print("""
+Which currency are you converting from?
+Format: 3 Capitalized letters, Ex: AUD
+(Type 1 for list of avaiable currencies)
+""")
+convert_from_code = new_request.get_currency_code()
+
+
+# convert_from = new_request.convert_from()
+# convert_to = new_request.convert_to()
+
+
+# final = new_request.convert(convert_to, convert_from)
+# print(convert_to)
+# print(convert_from)
+# print(final)
+
 # print(new_request.current_rates("success"))
 
 # currency_to = new_request.convert_to("CAD")
