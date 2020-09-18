@@ -22,6 +22,23 @@ class TestCurrencyConverterClass(unittest.TestCase):
         """Test get_currency_rates()"""
         CurrencyConverter.get_current_rates()
         self.assertEqual(type(CurrencyConverter.get_currency_rate("CAD")), float)
+        self.assertEqual(type(CurrencyConverter.get_currency_rate("USD")), float)
+        self.assertEqual(type(CurrencyConverter.get_currency_rate("GBP")), float)
+        self.assertEqual(type(CurrencyConverter.get_currency_rate("AUD")), float)
+        
+    def test_convert(self):
+        """Test convert"""
+        self.assertEqual(len(CurrencyConverter.convert(self,1000,1.5,1.2)), 7)
+        self.assertEqual(CurrencyConverter.convert(self,1000,1.5,1.2), "1250.00")
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
