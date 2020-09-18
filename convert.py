@@ -1,5 +1,6 @@
 import requests
 import json
+from decorators import format
 
 class Currency_converter():
     current_rates = []
@@ -31,11 +32,7 @@ class Currency_converter():
     def convert(self, amount, currency_rate_to, currency_rate_from):
         return amount*currency_rate_to/currency_rate_from
         
-    def format(self, func):
-        def wrapper():
-            formatted_value = "{:.2f}".format(func)
-            return formatted_value
-        return wrapper
+
         
         
         
