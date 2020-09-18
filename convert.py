@@ -23,14 +23,19 @@ class Currency_converter():
             currency_code = input("try again\n")
         return currency_code
         
-    
     @classmethod
-    def get_currency_value(cls, currency_code):
+    def get_currency_rate(cls, currency_code):
         return cls.current_rates[currency_code]
+    
+    @format    
+    def convert(self, amount, currency_rate_to, currency_rate_from):
+        return amount*currency_rate_to/currency_rate_from
         
-    def convert(self, amount, currency_value_to, currency_value_from):
-        return amount*currency_value_to/currency_value_from
-        
+    def format(self, func):
+        def wrapper():
+            formatted_value = "{:.2f}".format(func)
+            return formatted_value
+        return wrapper
         
         
         
